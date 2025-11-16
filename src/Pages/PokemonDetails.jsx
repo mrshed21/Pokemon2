@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link, useParams, useNavigate } from "react-router-dom";
+import backImage from "../assets/123.gif";
 
 // Single validated component file for PokemonDetails
 const PokemonDetails = () => {
@@ -143,7 +144,7 @@ const PokemonDetails = () => {
       />
 
       <div className="Back-link">
-        <Link to="/pokemons">← Back to List <img src="../../public/123.gif" alt="" /></Link>
+        <Link to="/pokemons">← Back to List <img src={backImage} alt="" /></Link>
         
       </div>
 
