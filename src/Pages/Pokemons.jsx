@@ -5,11 +5,15 @@ import { Link } from "react-router-dom";
 const Pokemons = () => {
   const [pokemons, setPokemons] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [error , setError] = useState(false)
   const fetchAllPokemons = async () => {
     setLoading(true);
+    setError(false)
     try {
       const res = await fetch(`https://pokeapi.co/api/v2/pokemon?offset=${pokemons.length}&limit=5`);
+     
       const data = await res.json();
+      console.log(data)
 
       const detailed = await Promise.all(
         data.results.map(async (p) => {
@@ -27,9 +31,11 @@ const Pokemons = () => {
       );
 
       setPokemons([...pokemons , ...detailed]);
-      console.log(detailed);
+      
     } catch (err) {
-      console.error(err);
+       console.error(err);
+      setError(true)
+
     } finally {
       setLoading(false);
     }
@@ -42,14 +48,15 @@ const Pokemons = () => {
   return (
     <div className="Pokemons">
       <h2>Pokemons Page</h2>
-        {loading && <p>Loading Pokemons...</p>}
+      {error && <p> an error has occord </p>}
       <div className="PokemonList">
         {pokemons.map((pokemon, index) => (
-            <Link to={`/pokemons/${pokemon.id}`}>
-          <PokemonCard key={index} pokemon={pokemon} />
+          <Link key={index} to={`/pokemons/${pokemon.id}`}>
+          <PokemonCard pokemon={pokemon} />
           </Link>
         ))}
       </div>
+        {loading && <p>Loading Pokemons...</p>}
         <button onClick={fetchAllPokemons} className="Load-more">Load More</button>
 
     </div>
