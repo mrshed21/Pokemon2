@@ -4,7 +4,7 @@ A modern, interactive web application built with React that allows users to expl
 
 ## Live Demo
 
-Check out the live version of the application: [Pokemon Explorer](https://pokemon003.netlify.app/)
+Check out the live version of the application: [Pokemon Explorer](https://pokemon003.netlify.app/home)
 
 ## Features
 
