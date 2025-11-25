@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import PokemonCard from "../components/PokemonCard";
 import { Link } from "react-router-dom";
+import backImage from "../assets/123.gif";
+
 
 const Pokemons = () => {
   const [pokemons, setPokemons] = useState([]);
@@ -47,6 +49,9 @@ const Pokemons = () => {
 
   return (
     <div className="Pokemons">
+      <div className="Back-link">
+      <Link to="/" className="home-btn"><img src={backImage} alt="" />Home</Link>
+      </div>
       <h2>Pokemons Page</h2>
       {error && <p> an error has occord </p>}
       <div className="PokemonList">

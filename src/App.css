@@ -248,7 +248,7 @@ body {
   padding: 28px 20px;
   width: 100%;
   max-width: 1200px;
-  margin: 30px auto;
+  margin: 75px auto;
 }
 
 .Pokemons h2 {
@@ -550,6 +550,7 @@ body {
 /* Pokemon Details Container */
 .PokemonDetails {
   width: 90%;
+  margin-top: 75px;
   max-width: 1200px;
   display: flex;
   gap: 28px;
@@ -703,7 +704,9 @@ body {
   padding: 4px;
 }
 .Stat-value {
-  color: green;
+ 
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .Stat-value.max {
