@@ -1,0 +1,8 @@
+version: '3.8'
+
+services:
+  pokemon-app:
+    build: .
+    ports:
+      - "3006:3006"
+    restart: unless-stopped
