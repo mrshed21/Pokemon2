@@ -5,6 +5,7 @@ A modern, interactive web application built with React that allows users to expl
 ## Live Demo
 
 Check out the live version of the application: [Pokemon Explorer](https://pokemon003.netlify.app/home)
+or  [Pokemon Explorer](https://pokemon.murshed.io/home)
 
 ## Features
 
@@ -34,7 +35,7 @@ Check out the live version of the application: [Pokemon Explorer](https://pokemo
 
 1. Clone the repository:
    ```bash
-   git clone [https://github.com/mrshed21/Pokemon2]
+   git clone https://github.com/mrshed21/Pokemon2.git
    cd Pokemon2
    ```
 
