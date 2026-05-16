@@ -4,5 +4,5 @@ services:
   pokemon-app:
     build: .
     ports:
-      - "3006:3006"
+      - "172.17.0.1:3006:3006"
     restart: unless-stopped
